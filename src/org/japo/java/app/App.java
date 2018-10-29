@@ -33,10 +33,13 @@ public class App {
         int dia = gc.get(Calendar.DAY_OF_MONTH);
         int mes = gc.get(Calendar.MONTH) + 1;
         int any = gc.get(Calendar.YEAR);
-        String nombre = "indefinido";
         
-        switch (gc.get(Calendar.DAY_OF_WEEK)) {
-            
+        // Variables auxiliares
+        String nombre = "indefinido";
+        int diaSemana = gc.get(Calendar.DAY_OF_WEEK);
+        
+        // Detección del día de la semana
+        switch (diaSemana) {
             case Calendar.MONDAY:
                 nombre = "lunes";
                 break;
